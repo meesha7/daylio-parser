@@ -31,7 +31,10 @@ jobs:
         poetry run green
     - name: Check PEP8
       run: |
-        poetry run pycodestyle daylio_parser/
+        poetry run pycodestyle daylio_parser/ tests/
+    - name: Check PEP257
+      run: |
+        poetry run pydocstyle daylio_parser/ tests/
     - name: Check isort
       run: |
         poetry run isort --check-only .

@@ -57,10 +57,7 @@ class MoodConfig:
         self.__load_moods(mood_list)
 
     def get(self, mood_name: str) -> Mood:
-        """
-        Returns a Mood by its name
-        """
-
+        """Return a Mood by its name."""
         return self.__map[mood_name]
 
     def __load_moods(self, mood_list: List[Tuple[str, str]]):
